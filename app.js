@@ -10,5 +10,11 @@ about.addEventListener('click', (e) => {
       btn.classList.remove('active');
       e.target.classList.add('active');
     });
+    // Hide all articles but display the one with matching ID
+    articles.forEach((article) => {
+      article.classList.remove('active');
+    });
+    // using the variable ID, we search the DOM for the matching elemnt and then add the active class to the class list! the element in the DOM has matching ID ad the dataset!
+    document.getElementById(id).classList.add('active');
   }
 });
